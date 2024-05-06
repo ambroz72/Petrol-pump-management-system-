@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Purple Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="/static/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/static/assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="/static/assets/images/favicon.ico" />
+  </head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- mobile metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <!-- site metas -->
+  <title>GNG</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <!-- style css -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <!-- Responsive-->
+  <link rel="stylesheet" href="/static/css/responsive.css">
+  <!-- fevicon -->
+  <link rel="icon" href="/static/images/fevicon.png" type="image/gif" />
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="/static/css/jquery.mCustomScrollbar.min.css">
+  <!-- Tweaks for older IEs-->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+</head>
+<!-- body -->
+<body class="main-layout">
+
+  <!-- header -->
+  <header class="full_bg">
+     <!-- header inner -->
+     <div class="header">
+        <div class="header_top">
+           <div class="container">
+              <div class="row">
+                 <div class="col-md-3">
+                    <ul class="contat_infoma">
+                       <li><i class="fa fa-phone" aria-hidden="true"></i> Call : +01 12345678909</li>
+                    </ul>
+                 </div>
+                 <div class="col-md-6">
+                    <ul class="social_icon_top text_align_center  ">
+                       <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                       <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                       <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                       <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                 </div>
+                 <div class="col-md-3">
+                    <ul class="contat_infoma text_align_right">
+                       <li><a href="Javascript:void(0)"> <i class="fa fa-phone" aria-hidden="true"></i> ghostprotocol@gmail.com</a></li>
+                    </ul>
+                 </div>
+              </div>
+           </div>
+        </div>
+        {% comment %} <div class="container"> {% endcomment %}
+           <div class="row">
+              <div class="col-md-12">
+                 <div class="header_bottom">
+                    <div class="row">
+                       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                          <div class="full">
+                             <div class="center-desk">
+                                <div class="logo">
+                                   <a href="#">Gas-N-Go</a>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                          <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                             <span class="navbar-toggler-icon"></span>
+                             </button>
+                             <div class="collapse navbar-collapse" id="navbarsExample04">
+                                <ul class="navbar-nav mr-auto">
+                                   <li class="nav-item active">
+                                      <a class="nav-link" href="{% url 'home' %}">Home</a>
+                                   </li>
+                                   <li class="nav-item">
+                                      <a class="nav-link" href="#">About</a>
+                                   </li>
+                                   <li class="nav-item">
+                                      <a class="nav-link" href="{% url 'signup' %}">Signup</a>
+                                   </li>
+                                   <li class="nav-item">
+                                      <a class="nav-link" href="{% url 'loginpage' %}">Login</a>
+                                   </li>
+                                   <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'feed' %}">Feedback</a>
+                                   </li>
+                                </ul>
+                             </div>
+                             <ul class="search">
+                                <li><a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                             </ul>
+                          </nav>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+
+  <body>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth">
+          <div class="row flex-grow">
+            <div class="col-lg-4 mx-auto">
+              <div class="auth-form-light text-left p-5">
+                
+               
+                <h3>Signing up is easy. It only takes a few steps</h3>
+                <form method="POST" action="{% url 'Signup' %}" class="was-validated new" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                  <div class="form-group">
+                    <input type="text" name="fname" placeholder="First Name" id="input" pattern="[A-Z][a-zA-Z0-9-_]{4,24}" required class="form-control form-control-lg">
+                    <div class="valid-feedback">Valid</div>
+                       <div class="invalid-feedback">Invalid</div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="lname"  placeholder=" Last Name"  id="input"  pattern="[A-Z][a-zA-Z0-9-_]{0,24}" required class="form-control form-control-lg" >
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Invalid</div>
+                  </div>
+                  <div class="form-group">
+                    <input  type="text" name="adds"  placeholder="Address" required class="form-control form-control-lg" >
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Invalid</div>
+                  </div>
+                  <div class="form-group">
+                    <input type="number"  name="Age"  placeholder="Age"  required class="form-control form-control-lg" >
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Invalid</div>
+                  </div>
+                  <div class="form-group">
+                    <input name="uname"  type="text" id="input" pattern="[a-zA-Z0-9-_**]{5,10}" maxlength="10"  required  placeholder="User name" class="form-control form-control-lg" >
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Invalid</div>
+                  </div>
+                  <div class="form-group">
+                   <input type="email" name="E-mail"  placeholder="Email Id" pattern=".+@gmail\.com|.+@yahoo\.com|"  required class="form-control form-control-lg" >
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Invalid</div>
+                  </div>
+                  <div class="form-group">
+                    <input  type="text" list="pas"  id="input" name="pswd"  placeholder="Password"  class="form-control form-control-lg"  value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required> 
+                    <datalist id="pas">
+                        <option value="{{passwd}}">Suggested Password</option>
+                </datalist>
+                <div class="valid-feedback">Valid</div>
+                <div class="invalid-feedback">Invalid</div><br>
+                </div>
+
+                <div class="form-group">
+                  <input type="file" name="photo" accept="image/*"  placeholder="Photo"   class="form-control form-control-lg" required>
+                </div>
+
+
+                  <div><button class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn"  type="submit">SIGN IN</a></div>
+                  <div class="text-center mt-4 font-weight-light"> Already have an account? <a href="{% url 'loginpage' %}" class="text-primary">Login</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div></div>
+
+        <script>
+
+            // When the user starts to type something inside the password field
+            myInput.onkeyup = function() {
+            // Validate lowercase letters
+            var lowerCaseLetters = /[a-z]/g;
+            if(myInput.value.match(lowerCaseLetters)) {
+                letter.classList.remove("invalid");
+                letter.classList.add("valid");
+            } else {
+                letter.classList.remove("valid");
+                letter.classList.add("invalid");
+            }
+    
+            // Validate capital letters
+            var upperCaseLetters = /^[A-Z][a-zA-Z0-9.,$;]+$/;
+            if(myInput.value.match(upperCaseLetters)) {
+                capital.classList.remove("invalid");
+                capital.classList.add("valid");
+            } else {
+                capital.classList.remove("valid");
+                capital.classList.add("invalid");
+            }};
+    </script>
+
+
+
+
+        <footer>
+            <div class="footer">
+               <div class="container">
+                  <div class="row">
+                     <div class=" col-lg-3 col-md-6">
+                        <h3>GAS N GO</h3>
+                        <p class="many">
+                           There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou
+                        </p>
+                     </div>
+                     <div class="col-lg-2 offset-lg-1 col-md-6">
+                        <h3>QUICK LINKS</h3>
+                        <ul class="link_menu">
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#"> About</a></li>
+                           <li><a href="#">Projects</a></li>
+                           <li><a href="#">Staff</a></li>
+                           <li><a href="#">Contact Us</a></li>
+                        </ul>
+                     </div>
+                     
+                     <div class=" col-lg-3 col-md-6">
+                        <h3>INSTAGRAM FEEDS</h3>
+                        <ul class="insta text_align_left">
+                           <li><img src="/static/images/p3.jpg" alt="#"/></li>
+                           {% comment %} <li><img src="/static/images/inst2.png" alt="#"/></li>
+                           <li><img src="/static/images/inst3.png" alt="#"/></li>
+                           <li><img src="/static/images/inst4.png" alt="#"/></li> {% endcomment %}
+                        </ul>
+                     </div>
+   
+                     <div class=" col-lg-3 col-md-6 ">
+                        <h3>SIGN UP TO OUR NEWSLETTER </h3>
+                        <form class="bottom_form">
+                           <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
+                           <button class="sub_btn">Sign Up</button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <div class="copyright">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                           <p>© 2023 All Rights Reserved.<a href="#"> Gas-N-Go</a></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="/assets/js/off-canvas.js"></script>
+    <script src="/assets/js/hoverable-collapse.js"></script>
+    <script src="/assets/js/misc.js"></script>
+    <!-- endinject -->
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {% load sweetify %}
+    {% sweetify %} 
+
+  </body>
+</html>
