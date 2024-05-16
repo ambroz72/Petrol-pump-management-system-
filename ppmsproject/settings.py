@@ -128,9 +128,9 @@ MEDIA_ROOT = BASE_DIR/ 'media'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = 'ghostprotocol1172@gmail.com'
+DEFAULT_FROM_EMAIL = 'GNG@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'ghostprotocol1172@gmail.com'
+EMAIL_HOST_USER = 'GNG@gmail.com'
 EMAIL_HOST_PASSWORD = 'nphmmhuthpvujfvb'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

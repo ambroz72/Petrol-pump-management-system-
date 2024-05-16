@@ -357,7 +357,7 @@ def Signup(request):
                 user.save()
                 mail = EmailMessage ("Account Registered",
                                 "Thanks for registering with us. Your account is created , username="+"  "+ usernam +"  "+ " Password=" + "  " + paswd +"  " + ". Please log in with this credentials in future use. Warning:please dont share your password with anyother or any third party applications",
-                                "ghostprotocol1172@gmail.com",
+                                "GNG@gmail.com",
                                 [Email])
                 mail.send()
                     
