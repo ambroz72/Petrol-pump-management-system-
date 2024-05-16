@@ -357,9 +357,8 @@ def Signup(request):
                 user.save()
                 mail = EmailMessage ("Account Registered",
                                 "Thanks for registering with us. Your account is created , username="+"  "+ usernam +"  "+ " Password=" + "  " + paswd +"  " + ". Please log in with this credentials in future use. Warning:please dont share your password with anyother or any third party applications",
-                                "GNG@gmail.com",
-                                [Email])
-                mail.send()
+                                "GNG@gmail.com","yourmailid_@gmail.com",
+                                [Email]) mail.send()
                     
                 employee=User.objects.get(username=usernam) # for adding id in foriegn key column
                 custm = Employee(e_fname=Fname,e_lname=Lname,e_address=Address,
