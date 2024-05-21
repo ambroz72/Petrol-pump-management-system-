@@ -10,7 +10,7 @@ from ppmsapp.models import *
 from django.contrib import messages
 from django.core.mail import EmailMessage
 import sweetify
-# Create your views here.
+
 def home(request): 
     return render(request,"home.html")
 
