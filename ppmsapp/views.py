@@ -12,7 +12,6 @@ from django.core.mail import EmailMessage
 import sweetify
 # Create your views here.
 def home(request): 
-    # prd = Report.objects.all()
     return render(request,"home.html")
 
 def Eadmin(request):
