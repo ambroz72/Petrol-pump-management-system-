@@ -1,5 +1,7 @@
 # Petrol Pump Management System (Django E-Commerce Website)
 
+![screenshot](screenshot/home.png)
+
 # Overview
 
 The Petrol Pump Management System is a comprehensive software solution designed for managing various aspects of a petrol pump or gas station.
