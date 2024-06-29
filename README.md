@@ -1,6 +1,7 @@
 # Petrol Pump Management System (Django E-Commerce Website)
 
-![screenshot](screenshot/home.png)
+![screenshot](screenshot/phome.png)
+![screenshot](screenshot/phome2.png)
 
 # Overview
 
@@ -8,30 +9,60 @@ The Petrol Pump Management System is a comprehensive software solution designed 
 It includes functionalities for administrators to oversee operations, as well as features tailored for user interactions such as sales reporting,
 leave management, attendance tracking, and customer feedback.
 
+(password suggestion) 
+![screenshot](screenshot/password.png)
+
 #Key Features
 
 # Admin Dashboard:
 Provides administrators with access to manage categories, user accounts, sales reports, attendance records, and leave approvals.
+
+(admin page)
+![screenshot](screenshot/padmin.png)
+
 # User Page:
 Allows users to view their attendance status, apply for leave, submit feedback, update details, change profile picture, 
 and change password.
 # Category Management:
 Enables administrators to add, edit, and delete product categories for inventory management.
+
+(add category)
+![screenshot](screenshot/paddc.png)
+
 # Sales Reporting:
 Generates reports on sales transactions, providing insights into product performance and revenue.
+
+(sales report)
+![screenshot](screenshot/preport.png)
+
 # User Table:
 Displays a list of users with relevant details such as employee information and attendance records.
 # Leave Management:
 Facilitates the application and approval process for employee leave requests.
+
+(employee's leave request admin approve / reject)
+![screenshot](screenshot/pleave.png)
+
 # Attendance Tracking:
 Tracks employee attendance to monitor punctuality and performance.
+
+(employee's attendance admin checking)
+![screenshot](screenshot/pattendence.png)
 # Feedback System:
 Allows users to submit feedback, suggestions, or complaints for continuous improvement.
+
+(anyone can write a review)
+![screenshot](screenshot/feedback.png)
+
 # Password Security:
 Upon successful signup, the user's username and password are securely mailed to their registered email address.
 # Sweetify Integration:
-Sweetify messages appear for all operations done, providing users with instant feedback and notifications.
+(admin delete the profile of an employee)
+![screenshot](screenshot/edelete.png)
 
+Sweetify messages appear for all operations done, providing users with instant feedback and notifications.
+![screenshot](screenshot/login.png)
+![screenshot](screenshot/signuperror.png)
 Technologies Used
 
 Frontend: HTML, CSS, JavaScript
